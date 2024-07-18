@@ -1,8 +1,0 @@
-public interface Comparable {
-
-	int compareTo(Task other);
-
-	int compareTo(Process other);
-	
-
-}//end interface
