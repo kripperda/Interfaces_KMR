@@ -1,0 +1,45 @@
+import java.util.Iterator;
+import java.util.ArrayList;
+
+public class Application {
+
+	public static void main(String[] args) {
+		
+		//array to store tasks
+		ArrayList<Task> tasks = new ArrayList<Task>();
+		
+		//add tasks to the list
+		tasks.add(new Task("Workout", Priority.MEDIUM));
+		tasks.add(new Task("Play with kids", Priority.HIGHEST));
+		tasks.add(new Task("Do dishes", Priority.LOWEST));
+		tasks.add(new Task("Be awesome", Priority.MEDIUM));
+		tasks.add(new Task("Shower", Priority.HIGHEST));
+		tasks.add(new Task("Drive to Work", Priority.LOWEST));
+		
+		//iterator to task list
+		Iterator<Task> itr = tasks.iterator();
+		System.out.println(tasks.toString());
+		while(itr.hasNext()) {
+			System.out.println(itr.next());
+		}
+
+		//array to store processes
+		ArrayList<Process> processes = new ArrayList<Process>();
+				
+		//add tasks to the list
+		processes.add(new Process("Workout", Priority.MEDIUM));
+		processes.add(new Process("Play with kids", Priority.HIGHEST));
+		processes.add(new Process("Do dishes", Priority.LOWEST));
+		processes.add(new Process("Be awesome", Priority.MEDIUM));
+		processes.add(new Process("Shower", Priority.HIGHEST));
+		processes.add(new Process("Drive to Work", Priority.LOWEST));
+				
+		//iterator to task list
+		Iterator<Process> itr2 = processes.iterator();
+		System.out.println(processes.toString());
+		while(itr.hasNext()) {
+			System.out.println(itr2.next());
+		}
+	}//end main
+
+}//end class
