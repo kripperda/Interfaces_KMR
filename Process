@@ -1,0 +1,56 @@
+
+public class Process implements Comparable, Priority {
+
+	private String processID;
+	private int priority;
+	
+	public Process (String processID, int priority) {
+		this.processID = processID;
+		this.priority = priority;
+			//priority smaller than LOWEST - set to LOWEST
+			if(this.priority < LOWEST)
+				this.priority = LOWEST;
+			//priority larger than HIGHEST - set to HIGHEST
+			else if(this.priority > HIGHEST)
+				this.priority = HIGHEST;
+			//otherwise, set to given priority
+			else
+				this.priority = priority;
+		}//name and priority constructor
+	
+	//returns a negative value if task has a lower priority than other task
+			//returns a positive value if task has a higher priority than other task
+			//returns 0 if tasks have same priority
+		public int compareTo(Process other) {
+			return (priority - other.priority);
+		}
+
+		public int getPriority() {
+			return priority;
+		}//return priority method
+
+		public void setPriority(int priority) {
+			if(priority >= LOWEST && priority <= HIGHEST)
+				this.priority = priority;
+		}//update priority method
+		
+		public String getProcessID() {
+			return processID;
+		}
+
+		public void setProcessID(String processID) {
+			this.processID = processID;
+		}
+		
+		public String toString() {
+			return "Process [Process ID: "+processID+ "Priority: "+priority+"]";
+		}
+
+		@Override
+		public int compareTo(Task other) {
+			// TODO Auto-generated method stub
+			return 0;
+		}
+		
+
+}//end class
