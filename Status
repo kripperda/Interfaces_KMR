@@ -1,0 +1,5 @@
+package Status;
+
+public enum Status {
+	NOT_STARTED, IN_PROCESS, COMPLETE, status;
+}//end enum
