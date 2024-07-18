@@ -1,0 +1,91 @@
+
+public class Task implements Comparable, Priority {
+	
+	public int priority;
+	private Object name;
+
+	enum Status {
+		NOT_STARTED, IN_PROCESS, COMPLETE, status;
+	private String name;
+	private int priority;
+	
+	public void Task() {
+			
+	}//empty-argument constructor
+
+	public void Task(String string, int priority) {
+		this.name = name;
+		this.priority = priority;
+			//priority smaller than LOWEST - set to LOWEST
+			if(this.priority < LOWEST)
+				this.priority = LOWEST;
+			//priority larger than HIGHEST - set to HIGHEST
+			else if(this.priority > HIGHEST)
+				this.priority = HIGHEST;
+			//otherwise, set to given priority
+			else
+				this.priority = priority;
+	}//name and priority constructor
+		//returns a negative value if task has a lower priority than other task
+			//returns a positive value if task has a higher priority than other task
+			//returns 0 if tasks have same priority
+	public int compareTo(Task other) {
+		return (priority - other.priority);
+	}
+	
+	public void setPriority(int priority) {
+		if(priority >= LOWEST && priority <= HIGHEST)
+			this.priority = priority;
+	}//update priority method
+		
+	public int getPriority() {
+		return priority;
+	}//return priority method
+	
+
+	public int compareTo1(Task other) {
+		return 0;
+	}
+
+	public int compareTo(Process other) {
+		return 0;
+	}
+
+	public String getName() {
+		return name;
+	}//returns name of task
+	
+	public String toString() {
+		return "Task [Name: " +name+ "Priority: "+priority+ "Status: "+status+"]";
+	}
+
+	}
+
+	public Task(String string, int priority) {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void setPriority(int priority) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public int getPriority() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int compareTo(Task other) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int compareTo(Process other) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+}//end class
